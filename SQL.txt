@@ -1,0 +1,17 @@
+SELECT date, SUM(score > 0) AS num_pos_score, SUM(score<0) AS num_neg_score
+FROM assessments
+WHERE
+date >= "2011-03-01 00:00:00"
+AND
+date <= "2011-04-30 23:59:59"
+GROUP BY date;
+
+
+SELECT date FROM assessments
+WHERE
+score < 0
+AND
+date >= "2011-01-01 00:00:00"
+AND
+date <= "2011-06-30 23:59:59";
+

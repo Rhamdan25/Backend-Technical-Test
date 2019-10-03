@@ -1,0 +1,8 @@
+1.)
+ps -C httpd | wc -l
+
+2.)
+for file in mig33/inner.folder/*.txt;
+do 
+    mv "$file" "${file%.txt}.dat"; 
+done
